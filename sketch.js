@@ -23,10 +23,10 @@ function draw(){
     background(0);
     Engine.update(engine);
 
-    //if(frameCount %10 === 0){
-        drop = new Drops( (random(0,400) ) , -20)
+    if(frameCount %10 === 0){
+        drop = new Drops( (random(0,400) ) , random(0,800));
         drop.showDrop();
-        //}
+        }
         //drop.updateY();
 } 
 

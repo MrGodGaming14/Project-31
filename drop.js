@@ -5,20 +5,20 @@ class Drops {
         restitution: 0.1,
         isStatic: false
         }
-    this.drops = Bodies.circle(x, y, 5, options);
-    World.add(world, this.drops);
+    this.drop = Bodies.circle(x, y, 10, options);
+    World.add(world, this.drop);
 
     }
     updateY(){
-        if(this.drops.position.y > 800){
-            this.drops.position.y = -20
-            this.drops.position.x = Math.round(random(1,400));
+        if(this.drop.position.y > 800){
+            this.drop.position.y = -20
+            this.drop.position.x = Math.round(random(1,400));
         }
     }
     showDrop(){
         ellipseMode(CENTER);
         fill("blue");
-        ellipse(this.drops.position.x, this.drops.position.y, 5, 5);
-        console.log(this.drops.position.y);
+        ellipse(this.drop.position.x, this.drop.position.y, 10, 10);
+        //console.log(this.drop.position.y);
     }
 }
